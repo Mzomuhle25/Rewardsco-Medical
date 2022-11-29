@@ -1,0 +1,58 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+$black: #000;
+$grey: #4a5059;
+
+$text-strong: $black;
+$text: $grey;
+$red: #ec3750;
+$danger: $black;
+
+@mixin backgroundShorthand($imgpath, $position: 0 0, $repeat: repeat) {
+  background: transparent url(#{$imgpath}) $repeat $position;
+}
+.landing {
+  @include backgroundShorthand("./Img/Taieri.svg");
+}
+a.navlink.has-text-black:hover {
+  color: #c6c6c6 !important;
+}
+.navbar-item:hover {
+  color: #c6c6c6 !important;
+}
+
+.root {
+  color: #ffffff !important;
+}
+
+.box.columns.is-centered.is-vcentered.has-fixed-height {
+  min-height: 580px !important;
+}
+.control.has-icons-left .icon.is-left {
+  z-index: 1;
+}
+DatePicker {
+  z-index: 10;
+}
+//Table
+.box.table-wrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.approved_record{
+  background-color: #00ffff19;
+}
+
+.un_approved_record{
+  background-color: #ff092a73;
+}
+
+.column_font_family{
+  font-family:'fangsong';
+}
+
+$table-cell-border: 0px;
+$table-cell-padding: 1em 0.75em;
+
+@import "../node_modules/bulma/bulma";
